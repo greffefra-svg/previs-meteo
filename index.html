@@ -3,150 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Situation générale</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f4f6f8;
-            color: #333;
-        }
-        nav {
-            background-color: #0077cc;
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 30px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            margin-right: 20px;
-            font-size: 16px;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        h2 {
-            margin-top: 40px;
-            border-bottom: 2px solid #0077cc;
-            padding-bottom: 5px;
-        }
-        .section-meteo {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-bottom: 30px;
-            align-items: stretch;
-        }
-        .carte-container {
-            width: 900px;
-            height: 600px;
-            max-width: 100%;
-            background: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            flex-shrink: 0;
-        }
-        .bloc-texte {
-            flex: 1;
-            min-width: 280px;
-            background: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            box-sizing: border-box;
-            line-height: 1.5;
-        }
-        .bloc-texte h3 {
-            margin-top: 0;
-            color: #0077cc;
-        }
-    </style>
+    <title>Accueil - Météo</title>
+
+    <link rel="stylesheet" href="style.css">
+	
 </head>
-<body>
 
-    <nav>
-        <a href="index.html">Accueil</a>
-        <a href="situation-generale.html">Situation générale</a>
-        <a href="roynac.html">Prévisions locales Roynac</a>
-    </nav>
+<body class="page-accueil">
 
-    <h1>Situation générale</h1>
-
-    <!-- 1. CARTE DES PRESSIONS -->
-    <h2>Carte des pressions</h2>
-    <div class="section-meteo">
-        <div class="carte-container">
-            <iframe width="900" height="600" src="https://windy.com°C&metricWind=km/h&zoom=4&overlay=pressure&product=ecmwf&level=surface&lat=47.517&lon=2.549&pressure=true" frameborder="0"></iframe>
-        </div>
-        <div class="bloc-texte">
-            <h3>Analyse des pressions</h3>
-            <p>Écrivez ici vos notes...</p>
-        </div>
-    </div>
-
-    <!-- 2. CARTE DU VENT AU SOL -->
-    <h2>Carte du vent au sol</h2>
-    <div class="section-meteo">
-        <div class="carte-container">
-            <iframe width="900" height="600" src="https://windy.com°C&metricWind=km/h&zoom=4&overlay=wind&product=ecmwf&level=surface&lat=47.517&lon=2.549&pressure=true" frameborder="0"></iframe>
-        </div>
-        <div class="bloc-texte">
-            <h3>Analyse du vent au sol</h3>
-            <p>Écrivez ici vos notes...</p>
-        </div>
-    </div>
-
-    <!-- 3. CARTE DU VENT À 1500M -->
-    <h2>Carte du vent à 1500m</h2>
-    <div class="section-meteo">
-        <div class="carte-container">
-            <iframe width="900" height="600" src="https://windy.com°C&metricWind=km/h&zoom=4&overlay=wind&product=ecmwf&level=850h&lat=47.517&lon=2.549&pressure=true" frameborder="0"></iframe>
-        </div>
-        <div class="bloc-texte">
-            <h3>Analyse du vent à 1500m (850 hPa)</h3>
-            <p>Écrivez ici vos notes...</p>
-        </div>
-    </div>
-
-    <!-- 4. CARTE DU VENT À 3000M -->
-    <h2>Carte du vent à 3000m</h2>
-    <div class="section-meteo">
-        <div class="carte-container">
-            <iframe width="900" height="600" src="https://windy.com°C&metricWind=km/h&zoom=4&overlay=wind&product=ecmwf&level=700h&lat=47.517&lon=2.549&pressure=true" frameborder="0"></iframe>
-        </div>
-        <div class="bloc-texte">
-            <h3>Analyse du vent à 3000m (700 hPa)</h3>
-            <p>Écrivez ici vos notes...</p>
-        </div>
-    </div>
-
-    <!-- 5. CARTE NUAGES ET PRÉCIPITATIONS -->
-    <h2>Carte nuages et précipitations</h2>
-    <div class="section-meteo">
-        <div class="carte-container">
-            <iframe width="900" height="600" src="https://windy.com°C&metricWind=km/h&zoom=4&overlay=clouds&product=ecmwf&level=surface&lat=47.517&lon=2.549&pressure=true" frameborder="0"></iframe>
-        </div>
-        <div class="bloc-texte">
-            <h3>Analyse des nuages et précipitations</h3>
-            <p>Écrivez ici vos notes...</p>
-        </div>
-    </div>
-
-    <!-- 6. CARTE DES FRONTS -->
-    <h2>Carte des fronts</h2>
-    <div class="section-meteo">
-        <div class="carte-container" style="overflow: hidden;">
-            <img src="https://dwd.de" alt="Carte des fronts DWD" style="width: 100%; height: 100%; object-fit: contain; display: block;">
-        </div>
-        <div class="bloc-texte">
-            <h3>Analyse des fronts (DWD)</h3>
-            <p>Carte synoptique officielle mise à jour automatiquement.</p>
-            <p><a href="https://metoffice.gov.uk" target="_blank" style="color: #0077cc; font-weight: bold;">Ouvrir aussi la carte Met Office &rarr;</a></p>
-        </div>
-    </div>
-
+    <div id="menu-principal"></div>
+<script src="menu.js"></script>
+<h1 class="titre-accueil">Prévisions météo perso</h1>
 </body>
 </html>

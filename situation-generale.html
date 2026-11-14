@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Situation générale</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="menu-principal"></div>
+<script src="menu.js"></script>
+
+    <h1>Situation générale</h1>
+
+
+    <!-- 1. CARTE DES PRESSIONS -->
+
+    <h2>Carte des pressions</h2>
+
+    <div class="section-meteo">
+
+        <div class="carte-container">
+            <iframe src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=mm&metricTemp=°C&metricWind=km/h&zoom=4&overlay=pressure&product=ecmwf&level=surface&lat=47.517&lon=2.549&pressure=true"
+            loading="lazy"></iframe>
+        </div>
+
+        <div class="bloc-texte">
+            <h3>A vérifier</h3>
+            <p>Je regarde où sont les anticyclones (H), les les dépressions (L) et les marais barométrique. <br>
+J’anticipe le type de temps en fonction de la pression sur mon site de vol et de l’évolution sur les prochains jours.</p>
+        </div>
+
+    </div>
+
+
+    <!-- 2. CARTE DU VENT AU SOL -->
+
+    <h2>Carte du vent au sol</h2>
+
+    <div class="section-meteo">
+
+        <div class="carte-container">
+            <iframe src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=mm&metricTemp=°C&metricWind=km/h&zoom=4&overlay=wind&product=ecmwf&level=surface&lat=47.517&lon=2.549&pressure=true"
+            loading="lazy"></iframe>
+        </div>
+
+        <div class="bloc-texte">
+            <h3>A vérifier</h3>
+            <p>Je regarde la force et l'orientation du vent, au sol, en altitude, et les couloirs de vent fort.<br>
+Je remonte l’origine du vent. Ça me donne la masse d'air : chaude, froide, humide, sèche ...</p>
+        </div>
+
+    </div>
+
+
+    <!-- 3. CARTE DU VENT A 1500M -->
+
+    <h2>Carte du vent à 1500m</h2>
+
+    <div class="section-meteo">
+
+        <div class="carte-container">
+            <iframe src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=mm&metricTemp=°C&metricWind=km/h&zoom=4&overlay=wind&product=ecmwf&level=850h&lat=47.517&lon=2.549&pressure=true"
+            loading="lazy"></iframe>
+        </div>
+
+        <div class="bloc-texte">
+            <h3>A vérifier</h3>
+            <p>Je regarde la force et l'orientation du vent, au sol, en altitude, et les couloirs de vent fort.<br>
+Je remonte l’origine du vent. Ça me donne la masse d'air : chaude, froide, humide, sèche ...</p>
+        </div>
+
+    </div>
+
+
+    <!-- 4. CARTE DU VENT A 3000M -->
+
+    <h2>Carte du vent à 3000m</h2>
+
+    <div class="section-meteo">
+
+        <div class="carte-container">
+            <iframe src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=mm&metricTemp=°C&metricWind=km/h&zoom=4&overlay=wind&product=ecmwf&level=700h&lat=47.517&lon=2.549&pressure=true"
+            loading="lazy"></iframe>
+        </div>
+
+        <div class="bloc-texte">
+            <h3>A vérifier</h3>
+            <p>Je regarde la force et l'orientation du vent, au sol, en altitude, et les couloirs de vent fort.<br>
+Je remonte l’origine du vent. Ça me donne la masse d'air : chaude, froide, humide, sèche ...</p>
+        </div>
+
+    </div>
+
+
+    <!-- 5. CARTE NUAGES ET PRECIPITATIONS -->
+
+    <h2>Carte nuages et précipitations</h2>
+
+    <div class="section-meteo">
+
+        <div class="carte-container">
+            <iframe src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=mm&metricTemp=°C&metricWind=km/h&zoom=4&overlay=clouds&product=ecmwf&level=surface&lat=47.517&lon=2.549&pressure=true"
+            loading="lazy"></iframe>
+        </div>
+
+        <div class="bloc-texte">
+            <h3>A vérifier</h3>
+            <p>Je regarde les zones de pluie et la couverture nuageuse.<br>
+J’identifie les lignes de fronts, leur déplacement et leur évolution.</p>
+        </div>
+
+    </div>
+
+
+    <!-- 6. CARTE DES FRONTS MET OFFICE -->
+
+    <h2>Carte des fronts – Met Office</h2>
+
+    <div class="section-meteo">
+
+        <div class="carte-container">
+            <iframe
+                src="https://weather.metoffice.gov.uk/maps-and-charts/surface-pressure"
+                loading="lazy"
+                title="Cartes des fronts Met Office">
+            </iframe>
+        </div>
+
+        <div class="bloc-texte">
+            <h3>A vérifier</h3>
+            <p>Pour aller plus loin : J’identifie le type de front : froid (bleu),chaud (rouge) ou occlus (violet).<br>
+J’anticipe l’impact sur ma pratique.<br>
+Je fais le lien avec les cartes précédentes.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>

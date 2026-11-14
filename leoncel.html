@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prévisions locales – Léoncel</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="menu-principal"></div>
+    <script src="menu.js"></script>
+
+    <h1>Prévisions locales – Léoncel</h1>
+
+
+    <h2>Météogramme Météoblue</h2>
+
+    <div class="section-meteo">
+
+        <div style="width: 900px; max-width: 100%; background: white;">
+
+            <iframe
+                src="https://www.meteoblue.com/fr/meteo/widget/meteogram/l%c3%a9oncel_france_3003061?geoloc=fixed&temperature_units=CELSIUS&windspeed_units=KILOMETER_PER_HOUR&precipitation_units=MILLIMETER&forecast_days=5&layout=bright&autowidth=auto&user_key=18f4db79e381405d&embed_key=63a006d6983555ef&sig=a9fb3bfd1b0b26bb0a345e82006a34c7c7d70fc87cdc57205b0fcd6dc663b7cc"
+                frameborder="0"
+                scrolling="NO"
+                allowtransparency="true"
+                sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox"
+                style="width: 100%; height: 700px; border: 0; overflow: hidden;">
+            </iframe>
+
+        </div>
+
+        <div class="bloc-texte">
+            <h3>A vérifier</h3>
+            <p>
+                Je regarde l'évolution sur la semaine pour confirmer la tendance puis sur la journée prévue : vent, régularité, soleil, risque de pluie <br>
+                Je vérifie aussi la prévisibilité et la fiabilité des prévisions.<br>
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- 2. METEOBLUE AIR -->
+
+    <div class="section-meteo section-air">
+
+        <div class="bloc-texte">
+            <h3>Prévisions aéronautiques</h3>
+            <p>
+                Accéder aux prévisions aéronautiques détaillées
+                de Météoblue pour le site choisi.
+            </p>
+            <button class="element-navigation" onclick="window.open(
+                'https://www.meteoblue.com/fr/meteo/aviation/air/l%c3%a9oncel_france_3003061',
+                'meteoblue_air',
+                'width=1200,height=900,resizable=yes,scrollbars=yes'
+            )">
+                Ouvrir Météoblue AIR
+            </button>
+        </div>
+
+        <div class="bloc-texte">
+            <h3>A vérifier</h3>
+            <p>
+                Je regarde la force et la direction du vent avec préçisions à chaque altitude, et la température. Je repère le moment si le vent forcit en altitude.<br>
+                Attention, le vent est mesuré en nœuds : 1 nœud = 1,8 km/h.<br>
+                Je regarde les nuages : altitude, épaisseur, évolution et précipitations. Je devine le type de nuage (convectif ou advectif).<br>
+                Je fais le lien avec les fronts et j’anticipe les risques de sur-developpement.
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- 3. METEOCIEL AROME HAUTE ALTITUDE -->
+
+    <h2>Prévisions AROME – Haute altitude - Météociel</h2>
+
+    <div class="section-meteo">
+        <div class="carte-container pleine-largeur">
+            <iframe
+                src="https://www.meteociel.fr/previsions-haute-altitude-arome/8191/leoncel.htm"
+                loading="lazy"
+                title="Prévisions AROME haute altitude – Léoncel">
+            </iframe>
+        </div>
+    </div>
+
+
+    <!-- 4. SKYPROBE – VUE EN COUPE -->
+
+    <h2>Vue en coupe – Skyprobe</h2>
+
+    <div class="section-meteo">
+        <div class="carte-container pleine-largeur">
+            <iframe
+                src="https://skyprobe.fr/?zone=france&lat=44.9068&lon=5.2053&z=13"
+                loading="lazy"
+                title="Skyprobe – Vue en coupe Léoncel">
+            </iframe>
+        </div>
+    </div>
+
+
+    <!-- 5. METEOPARAPENTE – VUE EN COUPE -->
+
+    <h2>Vue en coupe – Météo-Parapente</h2>
+
+    <div class="section-meteo">
+        <div class="carte-container pleine-largeur">
+            <iframe
+                src="https://meteo-parapente.com/v5/#/44.9068,5.2053,13"
+                loading="lazy"
+                title="Météo-Parapente – Vue en coupe Léoncel">
+            </iframe>
+        </div>
+    </div>
+
+</body>
+</html>

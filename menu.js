@@ -1,10 +1,10 @@
 document.getElementById("menu-principal").innerHTML = `
     <nav>
         <a class="element-navigation" href="index.html">Accueil</a>
-        <a class="element-navigation" href="situation-generale.html">Situation générale</a>
+        <a class="element-navigation" href="situation-generale.html">Vision globale</a>
 
         <div class="menu-deroulant">
-            <a class="element-navigation" href="#">Prévisions par site ▾</a>
+            <a class="element-navigation" href="#">Vision locale▾</a>
             <div class="sous-menu">
                 <a class="element-navigation" href="roynac.html">Roynac</a>
 				<a class="element-navigation" href="limouches.html">Les Limouches</a>

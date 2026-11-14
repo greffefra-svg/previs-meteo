@@ -49,12 +49,6 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             flex-shrink: 0;
         }
-        .carte-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            display: block;
-        }
         .bloc-texte {
             flex: 1;
             min-width: 280px;
@@ -85,11 +79,11 @@
     <h2>Carte des pressions</h2>
     <div class="section-meteo">
         <div class="carte-container">
-            <iframe src="https://windy.com"></iframe>
+            <iframe width="900" height="600" src="https://windy.com°C&metricWind=km/h&zoom=4&overlay=pressure&product=ecmwf&level=surface&lat=47.517&lon=2.549&pressure=true" frameborder="0"></iframe>
         </div>
         <div class="bloc-texte">
             <h3>Analyse des pressions</h3>
-            <p>Écrivez ici vos notes sur la position des anticyclones et des dépressions...</p>
+            <p>Écrivez ici vos notes...</p>
         </div>
     </div>
 
@@ -97,11 +91,11 @@
     <h2>Carte du vent au sol</h2>
     <div class="section-meteo">
         <div class="carte-container">
-            <iframe src="https://windy.com"></iframe>
+            <iframe width="900" height="600" src="https://windy.com°C&metricWind=km/h&zoom=4&overlay=wind&product=ecmwf&level=surface&lat=47.517&lon=2.549&pressure=true" frameborder="0"></iframe>
         </div>
         <div class="bloc-texte">
             <h3>Analyse du vent au sol</h3>
-            <p>Écrivez ici vos notes sur le flux général en surface...</p>
+            <p>Écrivez ici vos notes...</p>
         </div>
     </div>
 
@@ -109,11 +103,11 @@
     <h2>Carte du vent à 1500m</h2>
     <div class="section-meteo">
         <div class="carte-container">
-            <iframe src="https://windy.com"></iframe>
+            <iframe width="900" height="600" src="https://windy.com°C&metricWind=km/h&zoom=4&overlay=wind&product=ecmwf&level=850h&lat=47.517&lon=2.549&pressure=true" frameborder="0"></iframe>
         </div>
         <div class="bloc-texte">
             <h3>Analyse du vent à 1500m (850 hPa)</h3>
-            <p>Écrivez ici vos notes sur le vent météo à 1500m d'altitude...</p>
+            <p>Écrivez ici vos notes...</p>
         </div>
     </div>
 
@@ -121,11 +115,11 @@
     <h2>Carte du vent à 3000m</h2>
     <div class="section-meteo">
         <div class="carte-container">
-            <iframe src="https://windy.com"></iframe>
+            <iframe width="900" height="600" src="https://windy.com°C&metricWind=km/h&zoom=4&overlay=wind&product=ecmwf&level=700h&lat=47.517&lon=2.549&pressure=true" frameborder="0"></iframe>
         </div>
         <div class="bloc-texte">
             <h3>Analyse du vent à 3000m (700 hPa)</h3>
-            <p>Écrivez ici vos notes sur le flux en altitude...</p>
+            <p>Écrivez ici vos notes...</p>
         </div>
     </div>
 
@@ -133,11 +127,11 @@
     <h2>Carte nuages et précipitations</h2>
     <div class="section-meteo">
         <div class="carte-container">
-            <iframe src="https://windy.com"></iframe>
+            <iframe width="900" height="600" src="https://windy.com°C&metricWind=km/h&zoom=4&overlay=clouds&product=ecmwf&level=surface&lat=47.517&lon=2.549&pressure=true" frameborder="0"></iframe>
         </div>
         <div class="bloc-texte">
             <h3>Analyse des nuages et précipitations</h3>
-            <p>Écrivez ici vos notes sur la couverture nuageuse et les pluies prévues...</p>
+            <p>Écrivez ici vos notes...</p>
         </div>
     </div>
 
@@ -145,34 +139,14 @@
     <h2>Carte des fronts</h2>
     <div class="section-meteo">
         <div class="carte-container" style="overflow: hidden;">
-            <img id="carte-metoffice" referrerpolicy="no-referrer" alt="Carte isobare Met Office" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+            <img src="https://dwd.de" alt="Carte des fronts DWD" style="width: 100%; height: 100%; object-fit: contain; display: block;">
         </div>
         <div class="bloc-texte">
-            <h3>Analyse des fronts (Met Office)</h3>
-            <p>Écrivez ici vos notes sur le passage des perturbations, fronts chauds et fronts froids...</p>
-            <p><a href="https://weather.metoffice.gov.uk/maps-and-charts/surface-pressure" target="_blank" style="color: #0077cc; font-weight: bold;">Ouvrir l'animation complète sur le Met Office &rarr;</a></p>
+            <h3>Analyse des fronts (DWD)</h3>
+            <p>Carte synoptique officielle mise à jour automatiquement.</p>
+            <p><a href="https://metoffice.gov.uk" target="_blank" style="color: #0077cc; font-weight: bold;">Ouvrir aussi la carte Met Office &rarr;</a></p>
         </div>
     </div>
 
-    <script>
-        (function() {
-            const d = new Date();
-            const y = d.getUTCFullYear();
-            const m = String(d.getUTCMonth() + 1).padStart(2, '0');
-            const j = String(d.getUTCDate()).padStart(2, '0');
-            const run = d.getUTCHours() >= 19 ? '1200' : '0000';
-            const img = document.getElementById('carte-metoffice');
-
-            img.onerror = function() {
-                const h = new Date(d.getTime() - 86400000);
-                this.src = `https://metoffice.gov.uk{h.getUTCFullYear()}-${String(h.getUTCMonth() + 1).padStart(2, '0')}-${String(h.getUTCDate()).padStart(2, '0')}T1200/FSXX00T_00.gif`;
-                this.onerror = null;
-            };
-
-            img.src = `https://metoffice.gov.uk{y}-${m}-${j}T${run}/FSXX00T_00.gif`;
-        })();
-    </script>
-
 </body>
 </html>
-

@@ -227,7 +227,7 @@ h2 {
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
+    right: 0;
     min-width: 180px;
     background: rgba(0, 0, 0, 0.65);
     z-index: 1000;
@@ -352,7 +352,9 @@ h1 {
     padding-bottom: 12px;
     border-bottom: 2px solid #d5e1e9;
 }
-
+.titre-accueil {
+    border-bottom: none;
+}
 
 /* =====================================
    INTRODUCTION – VISION GLOBALE

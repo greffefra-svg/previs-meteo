@@ -1,7 +1,8 @@
 document.getElementById("menu-principal").innerHTML = `
     <nav>
         <a class="element-navigation" href="index.html">Accueil</a>
-        <a class="element-navigation" href="situation-generale.html">Vision globale</a>
+       
+	   <a class="element-navigation" href="situation-generale.html">Vision globale</a>
 
         <div class="menu-deroulant">
             <a class="element-navigation" href="#">Vision locale▾</a>
@@ -11,7 +12,15 @@ document.getElementById("menu-principal").innerHTML = `
 				<a class="element-navigation" href="leoncel.html">Léoncel</a>
             </div>
         </div>
-
-        <a class="element-navigation" href="balises.html">Carte des balises</a>
+		
+		<div class="menu-deroulant">
+            <a class="element-navigation" href="#">En direct▾</a>
+            <div class="sous-menu">
+                <a class="element-navigation" href="balises.html">Carte des balises</a>
+				<a class="element-navigation" href="spotair.html">Spotair/Webcam</a>
+				<a class="element-navigation" href="radar de pluie.html">Radars de pluie</a>
+            </div>
+        </div>
+        
     </nav>
 `;

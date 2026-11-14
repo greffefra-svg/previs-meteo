@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Météo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f6f8;
+            color: #333;
+        }
+        h2 {
+            margin-top: 30px;
+            border-bottom: 2px solid #0077cc;
+            padding-bottom: 5px;
+        }
+        .carte-container {
+            width: 100%;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background: #fff;
+        }
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PREMIÈRE CARTE -->
+    <h2>Radar des précipitations (meteoblue)</h2>
+    <div class="carte-container">
+        <!-- COLLEZ LE CODE IFRAME DE METEOBLUE ICI -->
+        <iframe src="https://meteoblue.com"></iframe>
+    </div>
+
+    <!-- DEUXIÈME CARTE -->
+    <h2>Carte des vents (Windy)</h2>
+    <div class="carte-container">
+        <!-- COLLEZ LE CODE IFRAME DE LA 2ÈME CARTE ICI -->
+        <iframe src="https://windy.com°C&metricWind=km/h&zoom=7&overlay=wind&product=ecmwf&level=surface&lat=44.728&lon=5.022"></iframe>
+    </div>
+
+</body>
+</html>

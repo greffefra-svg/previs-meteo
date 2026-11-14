@@ -300,3 +300,22 @@ body.page-accueil {
 .carte-metoffice {
     height: 900px;
 }
+/* =====================================
+   CARTE INTERACTIVE METEOCIEL GFS
+===================================== */
+
+.carte-meteociel {
+    width: 900px;
+    height: 940px;
+    max-width: 100%;
+    position: relative;
+    flex: 0 1 900px;
+}
+
+.carte-meteociel iframe {
+    width: 1080px;
+    height: 2000px;
+    max-width: none;
+    transform: translate(-180px, -730px);
+    transform-origin: top left;
+}

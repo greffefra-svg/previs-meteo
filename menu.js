@@ -17,7 +17,7 @@ document.getElementById("menu-principal").innerHTML = `
             <a class="element-navigation" href="#">En direct▾</a>
             <div class="sous-menu">
                 <a class="element-navigation" href="balises.html">Carte des balises</a>
-				<a class="element-navigation" href="spotair.html">Spotair/Webcam</a>
+				<a class="element-navigation" href="spotair.html">Carte des webcams</a>
 				<a class="element-navigation" href="radar de pluie.html">Radars de pluie</a>
             </div>
         </div>
